@@ -42,7 +42,6 @@ module.exports={
                         options:{
                             modules:{
                                 exportLocalsConvention:"camelCase",
-                                localIdentHashPrefix: "my-custom-hash",//optional
                             },
                         },
                     },
