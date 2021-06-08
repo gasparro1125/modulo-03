@@ -5,8 +5,11 @@ const path = require("path");
 
 module.exports={
     context: path.resolve(__dirname,"src"),
+    resolve:{
+        extensions:[".js",".ts"],
+    },
     entry: {
-        app:"./index.js",
+        app:"./index.ts",
         vendorStyles: "../node_modules/bootstrap/dist/css/bootstrap.css",
     },
     output:{
@@ -16,7 +19,7 @@ module.exports={
     module:{
         rules:[
             {
-                test: /\.js$/,
+                test: /\.ts$/,
                 exclude: /node_modules/,
                 loader: "babel-loader",
             },
@@ -66,7 +69,7 @@ module.exports={
         }),
         new CleanWebpackPlugin(),
     ],
-    devtools: "eval-source-map",
+    devtool: "eval-source-map",
     devServer:{
         port: 8081,
         stats: "errors-only",
