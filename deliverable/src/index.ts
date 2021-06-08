@@ -6,7 +6,7 @@ img.src = logoImg;
 
 document.getElementById("imgC").appendChild(img);
 
-function escrb(){
+function escrb():void{
     console.log("hola munditooooooo");
 }
 escrb();
